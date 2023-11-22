@@ -14,7 +14,7 @@ html {
 .hero {
     display: flex; 
     align-items:center; 
-    justify-content: center; 
+    justify-content: space-evenly; 
     gap: 5rem;
 }
 
@@ -49,7 +49,23 @@ html {
     }
 
     .intro {
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar {
+        background-color: darkcyan; 
+        position: fixed; 
+        width: 100%; 
+        max-width: 190rem; 
+        z-index: 2;
+        border-bottom: solid 1px white;
+        justify-content: flex-start;
+        max-width: 190rem;
+        display: flex;
+        text-align: start;
+        align-items: center;
+        padding-left: 2rem;
+        color: white;
     }
    
 }
@@ -64,6 +80,22 @@ html {
         padding: 8rem 0;
         height: 100%;
         border-bottom: solid 1px white;
+    }
+
+    .navbar {
+        background-color: darkcyan; 
+        position: fixed; 
+        width: 100%; 
+        max-width: 190rem; 
+        z-index: 2;
+        border-bottom: solid 1px white;
+        justify-content: space-between;
+        max-width: 190rem;
+        display: flex;
+        text-align: start;
+        align-items: center;
+        padding: 1rem 2rem;
+        color: white;
     }
 
     .hero {
@@ -98,7 +130,7 @@ html {
     }
 
     .intro {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 }
 
@@ -135,6 +167,174 @@ html {
 }
 
 .everybody {
-    max-width: 140rem;
+    max-width: 190rem;
     margin: 0 auto;
+}
+
+
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1010px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items:center; 
+        justify-content: center; 
+        gap: 5rem;
+    }
+
+    .navbar {
+        background-color: darkcyan; 
+        position: fixed; 
+        width: 100%; 
+        max-width: 190rem; 
+        z-index: 2;
+        border-bottom: solid 1px white;
+        justify-content: space-between;
+        max-width: 190rem;
+        display: flex;
+        text-align: start;
+        align-items: center;
+        padding:1rem 2rem;
+        color: white;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items:center; 
+        justify-content: center; 
+        gap: 5rem;
+    }
+
+    .navbar {
+        background-color: darkcyan; 
+        position: fixed; 
+        width: 100%; 
+        max-width: 190rem; 
+        z-index: 2;
+        border-bottom: solid 1px white;
+        justify-content: space-between;
+        max-width: 190rem;
+        display: flex;
+        text-align: start;
+        align-items: center;
+        padding:1rem 2rem;
+        color: white;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+
+
+/* .navbar {
+    background-color: darkcyan; 
+    position: fixed; 
+    width: 100%; 
+    max-width: 140rem; 
+    z-index: 2;
+    border: solid 1px white;
+    max-width: 190rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+} */
+
+.hamburger {
+    display: none;
+    background-color: none;
+    border: solid 1px white;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 8rem;
+        flex-direction: column;
+        background-color: darkcyan;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
 }
